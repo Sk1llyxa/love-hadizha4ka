@@ -11,6 +11,7 @@
       margin: 0;
       overflow: hidden;
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      -webkit-overflow-scrolling: touch;
     }
 
     .quick-link {
@@ -29,7 +30,6 @@
       font-size: 13px;
       user-select: none;
     }
-
     .quick-link:nth-of-type(1) { top: 10%; }
     .quick-link:nth-of-type(2) { top: 4%;  z-index: 998; }
     .quick-link:nth-of-type(3) { top: 16%; z-index: 997; }
@@ -41,49 +41,60 @@
       position: relative;
     }
 
-    .love {
+    #ui .love {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      margin: -180px 0 0 -180px; /* меньше, чтобы не вылезало */
       --i: 1;
     }
 
-    .love_word {
+    #ui .love_word {
       color: #ea80b0;
       font-size: 1.4rem;
+      transform: translateY(-100%) rotateZ(-30deg);
       text-shadow: 0 0 10px #fff;
       letter-spacing: 2px;
       white-space: nowrap;
-      display: inline-block;
     }
 
-    .love_horizontal {
-      animation: horizontal 10s infinite alternate ease-in-out;
-      animation-delay: calc(var(--i) * -0.3s);
+    #ui .love_horizontal {
+      animation: horizontal 10000ms infinite alternate ease-in-out;
+      animation-delay: calc(var(--i) * -300ms);
     }
 
-    .love_vertical {
-      animation: vertical 20s infinite linear;
-      animation-delay: calc(var(--i) * -0.3s);
+    #ui .love_vertical {
+      animation: vertical 20000ms infinite linear;
+      animation-delay: calc(var(--i) * -300ms);
     }
 
     @keyframes horizontal {
-      from { transform: translateX(0vw); }
-      to   { transform: translateX(35vw); } /* адаптивно по ширине экрана */
+      from { transform: translateX(0px); }
+      to   { transform: translateX(350px); } /* меньше, чем было 450px */
     }
 
     @keyframes vertical {
-      0%, 100%   { transform: translateY(20vh); }
-      25%        { transform: translateY(45vh); }
-      50%        { transform: translateY(60vh); }
-      75%        { transform: translateY(35vh); }
-    }
-
-    @media (max-width: 480px) {
-      .love_word {
-        font-size: 1.1rem;
-      }
+      0%   { transform: translateY(120px); }
+      10%  { transform: translateY(30px); }
+      15%  { transform: translateY(3px); }
+      18%  { transform: translateY(0px); }
+      20%  { transform: translateY(3px); }
+      22%  { transform: translateY(25px); }
+      24%  { transform: translateY(50px); }
+      25%  { transform: translateY(90px); }
+      26%  { transform: translateY(50px); }
+      28%  { transform: translateY(25px); }
+      30%  { transform: translateY(3px); }
+      32%  { transform: translateY(0px); }
+      35%  { transform: translateY(3px); }
+      40%  { transform: translateY(30px); }
+      50%  { transform: translateY(120px); }
+      71%  { transform: translateY(300px); }
+      72.5%{ transform: translateY(310px); }
+      75%  { transform: translateY(320px); }
+      77.5%{ transform: translateY(310px); }
+      79%  { transform: translateY(300px); }
+      100% { transform: translateY(120px); }
     }
   </style>
 </head>

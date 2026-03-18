@@ -45,7 +45,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      margin: -150px 0 0 -150px; /* ещё меньше */
+      margin: -130px 0 0 -130px; /* центр ближе, чтобы не вылезало */
       --i: 1;
     }
 
@@ -70,31 +70,31 @@
 
     @keyframes horizontal {
       from { transform: translateX(0px); }
-      to   { transform: translateX(300px); } /* ещё меньше, чтобы не доходило до края */
+      to   { transform: translateX(260px); } /* ещё меньше, для безопасности на iPhone */
     }
 
     @keyframes vertical {
-      0%   { transform: translateY(100px); }
-      10%  { transform: translateY(25px); }
-      15%  { transform: translateY(2px); }
+      0%   { transform: translateY(80px); }
+      10%  { transform: translateY(20px); }
+      15%  { transform: translateY(1px); }
       18%  { transform: translateY(0px); }
-      20%  { transform: translateY(2px); }
-      22%  { transform: translateY(20px); }
-      24%  { transform: translateY(40px); }
-      25%  { transform: translateY(70px); }
-      26%  { transform: translateY(40px); }
-      28%  { transform: translateY(20px); }
-      30%  { transform: translateY(2px); }
+      20%  { transform: translateY(1px); }
+      22%  { transform: translateY(15px); }
+      24%  { transform: translateY(30px); }
+      25%  { transform: translateY(55px); }
+      26%  { transform: translateY(30px); }
+      28%  { transform: translateY(15px); }
+      30%  { transform: translateY(1px); }
       32%  { transform: translateY(0px); }
-      35%  { transform: translateY(2px); }
-      40%  { transform: translateY(25px); }
-      50%  { transform: translateY(100px); }
-      71%  { transform: translateY(250px); }
-      72.5%{ transform: translateY(260px); }
-      75%  { transform: translateY(270px); }
-      77.5%{ transform: translateY(260px); }
-      79%  { transform: translateY(250px); }
-      100% { transform: translateY(100px); }
+      35%  { transform: translateY(1px); }
+      40%  { transform: translateY(20px); }
+      50%  { transform: translateY(80px); }
+      71%  { transform: translateY(210px); }
+      72.5%{ transform: translateY(220px); }
+      75%  { transform: translateY(230px); }
+      77.5%{ transform: translateY(220px); }
+      79%  { transform: translateY(210px); }
+      100% { transform: translateY(80px); }
     }
   </style>
 </head>
